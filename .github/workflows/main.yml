@@ -1,14 +1,15 @@
 #====================================================
 #   CI_CD_github_actions_pipline_ECS
 #====================================================
-  
-
 on:
   push:
     branches:
       - master
 
 name: Deploy to Amazon ECS
+
+env:
+  AWS_REGION: "eu-central-1"
 
 jobs:
   deploy:
@@ -40,7 +41,7 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
-        aws-region: <YOUR_AWS_REGION>
+        aws-region: ${{ env.AWS_REGION }}
 
     - name: Login to Amazon ECR
       id: login-ecr

@@ -19,10 +19,10 @@
         }
     ],
     "volumes": [],
-    "networkMode": "awsvpc",
+    "networkMode": "bridge",
     "memory": "512",
-    "cpu": "256",
-    "executionRoleArn": "arn:aws:iam::<YOUR_AWS_ACCOUNT_ID>:role/ecs-devops-sandbox-execution-role",
+    "cpu": "256",   
+    "executionRoleArn": "arn:aws:iam::092663235681:role/ecs-devops-sandbox-execution-role",
     "family": "ecs-devops-sandbox-task-definition",
     "taskRoleArn": "",
     "placementConstraints": []
