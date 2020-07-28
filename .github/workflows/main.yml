@@ -1,16 +1,15 @@
 #====================================================
 #   CI_CD_github_actions_pipline_ECS
 #====================================================
-name:
-env:
-  AWS_REGION: "eu-central-1"
-
 on:
   push:
     branches:
       - master
 
 name: Deploy to Amazon ECS
+
+env:
+  AWS_REGION: "eu-central-1"
 
 jobs:
   deploy:
