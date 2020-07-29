@@ -1,6 +1,6 @@
 {
     "requiresCompatibilities": [
-        "FARGATE"
+        "EC2"
     ],
     "inferenceAccelerators": [],
     "containerDefinitions": [
@@ -19,7 +19,7 @@
         }
     ],
     "volumes": [],
-    "networkMode": "awsvpc",
+    "networkMode": "bridge",
     "memory": "512",
     "cpu": "256",   
     "executionRoleArn": "arn:aws:iam::092663235681:role/ecs-devops-sandbox-execution-role",
